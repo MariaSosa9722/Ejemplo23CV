@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_23cv.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,18 @@ namespace ProyectoFinal_23cv
         public Sistema()
         {
             InitializeComponent();
+            GetUser();
         }
+
+
+        public void GetUser()
+        {
+            using (var _context = new AplicationdbContext())
+            {
+                UserTable.ItemsSource = _context.Usuarios.ToList();
+
+            }
+        }
+
     }
 }

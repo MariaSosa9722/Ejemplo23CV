@@ -44,7 +44,10 @@ namespace ProyectoFinal_23cv
                     if (result != null)
                     {
                         Sistema sistema = new Sistema();
+                       
+                        Hide();
                         sistema.Show();
+
                     }
                     else
                     {

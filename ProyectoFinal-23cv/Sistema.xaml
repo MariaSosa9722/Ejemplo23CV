@@ -7,7 +7,29 @@
         mc:Ignorable="d"
         Title="Sistema" Height="450" Width="800">
     <Grid>
-        <Label Content="Bienvenido al sistema" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.433,-4.183" FontSize="50" FontFamily="robot" Background="{x:Null}"/>
+        <Label Content="Dashboard" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.433,-4.183" FontSize="50" FontFamily="robot" Background="{x:Null}"/>
+        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" Margin="42,133,24,54" IsSynchronizedWithCurrentItem="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Usuario" Binding="{Binding User}"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}"/>
 
+                <DataGridTemplateColumn Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
