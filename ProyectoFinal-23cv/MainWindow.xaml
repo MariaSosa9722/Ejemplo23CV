@@ -1,0 +1,18 @@
+﻿<Window x:Class="ProyectoFinal_23cv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_23cv"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="375,71,0,0" VerticalAlignment="Top" Height="55" Width="88" FontSize="25"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="385,126,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Margin="359,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="375,175,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="359,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="390,249,0,0" VerticalAlignment="Top" Background="#FFC4E6B8" Click="Button_Click"/>
+
+    </Grid>
+</Window>
