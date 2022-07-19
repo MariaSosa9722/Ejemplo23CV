@@ -8,7 +8,7 @@
         Title="Sistema" Height="450" Width="800">
     <Grid>
         <Label Content="Dashboard" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.433,-4.183" FontSize="50" FontFamily="robot" Background="{x:Null}"/>
-        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" Margin="42,133,24,54" IsSynchronizedWithCurrentItem="True" >
+        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" Margin="215,133,24,54" IsSynchronizedWithCurrentItem="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
@@ -18,18 +18,31 @@
                 <DataGridTemplateColumn Header="Editar">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" />
+                            <Button Content="Select" Click="SelectItem" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete"/>
+                            <Button Content="Delete" Click="EliminarUser" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="45,146,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.616,11.673" IsEnabled="False" />
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="45,285,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Margin="45,239,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="45,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.424,-0.461"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="45,213,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="45,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.468"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="45,257,0,0" VerticalAlignment="Top" Height="23"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="77,365,0,0" VerticalAlignment="Top" Background="#FF58E2A5" Click="Button_Editar"/>
+        <ComboBox x:Name="SelectRol" DisplayMemberPath="Nombre" SelectedValuePath="Id"  HorizontalAlignment="Left" Margin="45,320,0,0" VerticalAlignment="Top" Width="120" />
+
+
     </Grid>
 </Window>

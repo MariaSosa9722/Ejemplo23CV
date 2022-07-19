@@ -17,6 +17,6 @@ namespace ProyectoFinal_23cv.Context
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
-
+        public DbSet<Rol> Roles { get; set; }
     }
 }
